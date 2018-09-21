@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List (jQuery)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <h1>Task list <span>jQuery</span></h1>
+    <header class="input-wrapper">
+        <form action="#">
+            <div class="input-img"></div>
+            <label>
+                <input id="inputField" type="text" placeholder="enter task" required>
+                <button id="btnAdd">add</button>
+            </label>
+        </form>
+    </header>
+    <main class="tasks-wrapper">
+        <ul id="todoList">
+            <template id="template">
+                <li>
+                    <a class="delTask">✖</a>
+                    <label>
+                        <input type="checkbox" class="mark">
+                        <span>{{text}}}</span>
+                    </label>
+                </li>
+            </template>
+        </ul>
+    </main>
+    <footer>
+        <label>
+            <input id="hideCompletedTasks" type="checkbox">
+            <span>Hide all completed tasks</span>
+        </label>
+        <button id="btnDelAllCompleted">delete all completed tasks</button>
+        <button id="btnDelAll">delete all tasks</button>
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="jquery.js"></script>
+</body>
+</html>
